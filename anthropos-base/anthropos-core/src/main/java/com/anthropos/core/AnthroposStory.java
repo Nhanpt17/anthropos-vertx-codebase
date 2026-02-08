@@ -10,25 +10,23 @@ public class AnthroposStory extends AnthroposEpic {
 
     @Override
     protected void onStart(AnthroposMessage message, Handler<AnthroposMessage> handler) {
-        devideTask(message, handler);
+        divideTask(message, handler);
     }
 
-    private void devideTask(AnthroposMessage message, Handler<AnthroposMessage> handler) {
+    private void divideTask(AnthroposMessage message, Handler<AnthroposMessage> handler) {
         execute(message, handler, 0);
     }
 
     private void execute(AnthroposMessage message, Handler<AnthroposMessage> handler, int index) {
 
-        if (tasks.size() == index || message.isStop()) {
+        if (tasks.size() == index || !message.isProcess()) {
             handler.handle(message);
         } else {
             AnthroposTask task = tasks.get(index);
             task.start(message, anthroposMessage -> {
-                System.out.println("Message: " + anthroposMessage.toString());
                 execute(anthroposMessage, handler, index + 1);
             });
         }
-
     }
 
 }

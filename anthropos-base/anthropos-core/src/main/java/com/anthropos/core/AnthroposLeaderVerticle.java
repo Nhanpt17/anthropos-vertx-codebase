@@ -16,7 +16,7 @@ public class AnthroposLeaderVerticle extends VerticleBase {
 
     @Override
     public Future<?> start() {
-
+        vertx.eventBus().registerDefaultCodec(AnthroposMessage.class, new AnthroposCodec());
         return loadConfig().compose(result ->{
             if(result == null || result.isEmpty()){
                 return Future.failedFuture("Load config failed");

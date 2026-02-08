@@ -7,7 +7,7 @@ import java.util.List;
 public abstract class AnthroposEpic extends AnthroposTask {
     protected List<AnthroposTask> tasks = new ArrayList<>();
 
-    protected AnthroposEpic(String taskName) {
+    public AnthroposEpic(String taskName) {
         super(taskName);
     }
 

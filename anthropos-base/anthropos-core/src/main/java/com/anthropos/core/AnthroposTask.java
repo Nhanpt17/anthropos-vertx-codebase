@@ -6,7 +6,7 @@ public abstract class AnthroposTask {
 
     private final String taskName;
 
-    protected AnthroposTask(String taskName) {
+    public AnthroposTask(String taskName) {
         this.taskName = taskName;
     }
 

@@ -14,7 +14,9 @@ public class AnthroposMain extends VertxApplication {
 
     protected AnthroposMain(String[] args, VertxApplicationHooks hooks, boolean printUsageOnFailure, boolean exitOnFailure) {
         super(args, hooks, printUsageOnFailure, exitOnFailure);
+
     }
+
 
 
 }

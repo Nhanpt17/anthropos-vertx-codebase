@@ -10,9 +10,8 @@
     "host": "0.0.0.0"
   },
   "verticles": [
-    "com.anthropos.demo.TestVerticle0",
-    "com.anthropos.demo.TestVerticle1",
-    "com.anthropos.demo.TestVerticle2"
+    "com.example.verticle.DemoVerticle1",
+    "com.example.verticle.DemoVerticle2"
   ],
   "customConfig": {
     "feature1": true,
